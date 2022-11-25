@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<head>
+<title>Combobox</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="naslov">
+<h1>
+Izaberite omiljenu boju:
+</h1>
+</div>
+
+<select name="color" id="color">
+<option value="0">Izaberite boju... </option>
+<option value="Zelena">Green</option>
+<option value="Bela">White</option>
+<option value="Plava">Blue</option>
+<option value="Zuta">Yellow</option>
+<option value="Ljubicasta">Purple</option>
+</select>
+
+
+<p id="list"></p>
+<script>
+  
+        var color = document.getElementById("color");
+        color.onchange = function () {
+
+            var res = document.getElementById("list");
+			if(color.value != 0){
+			res.innerHTML = color.value;
+			
+				}
+           else{ 
+		   
+		   res.innerHTML = "Morate izabrati boju";		
+				
+		   }
+        }
+		
+		
+ </script>
+ 
+ 
+</body>
+</html>

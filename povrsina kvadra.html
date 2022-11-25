@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function izracunajPovrsinu( l,  h,  w)
+        {
+            if(l > -1 && h > -1 && w > -1){
+                p = 2 * l * w + 2 * w * h + 2 * l * h;
+                document.getElementById("povrsina").innerHTML = p;
+                document.getElementById('err').innerHTML = "";
+            }
+            else{
+                document.getElementById('povrsina').innerHTML = "-";
+                document.getElementById('err').innerHTML = "Stranica kvadra mora biti pozivan broj";
+            }
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Povrsina kvadra</title>
+</head>
+<body>
+    <form>
+        <h1>Povrsina kvadra</h1>
+    
+        <p>Duzina:
+    
+        <input type="number" id="duzina" value="0"/>
+    
+        </p>
+        <br />
+        <p>Sirina:
+    
+            <input type="number" id="sirina" value="0"/>
+    
+        </p>
+        <br />
+        <p>Visina:
+    
+            <input type="number" id="visina" value="0"/>
+    
+        </p>
+        <br />
+        <p>Povrsina: 
+            <span id="povrsina">0</span>           
+        </p>
+        <br />
+        <input type="button" onClick="izracunajPovrsinu(duzina.value, sirina.value, visina.value)" value="Izracunaj"/>
+       </form>
+       <p id="err" style="color:tomato;"></p>
+</body>
+</html>
